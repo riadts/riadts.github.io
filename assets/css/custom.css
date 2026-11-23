@@ -1,0 +1,358 @@
+/* ========================================================
+   custom.css - Laboratory Work 3 Custom Stylesheet
+   Loaded AFTER main.css to override template styles
+   ======================================================== */
+
+/* --------------------------------------------------------
+   2. Typography Styles
+   -------------------------------------------------------- */
+
+/* 2a. Change the font family used on the website */
+:root {
+  --default-font: "Georgia", "Times New Roman", serif;
+  --heading-font: "Playfair Display", "Georgia", serif;
+  --nav-font: "Trebuchet MS", sans-serif;
+
+  /* Purple-Lavender Color Palette - Soft & Harmonious */
+  --accent-purple: #a78bfa;      /* soft violet - primary accent */
+  --accent-lavender: #d8b4fe;    /* light lavender */
+  --accent-pink: #e9d5ff;        /* muted lilac-pink */
+  --accent-blue: #818cf8;        /* muted indigo-blue (harmonious with purple) */
+  --accent-text-dark: #07080A;   /* dark text for light buttons */
+}
+
+body {
+  font-family: var(--default-font);
+}
+
+/* 2b. Change heading styles (h1-h6) - visually different from original */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
+  color: #a78bfa;
+  letter-spacing: 0.5px;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+
+h5 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+h6 {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+/* 2c. Update paragraph styles */
+p {
+  font-family: var(--default-font);
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: #e0e0e0;
+}
+
+/* 2d. Headings and paragraphs visually different from original template - done above */
+
+/* --------------------------------------------------------
+   3. Component Styles
+   -------------------------------------------------------- */
+
+/* 3a. Buttons and their pseudo-classes (:hover, :active) */
+.btn,
+.btn-primary,
+.btn-outline,
+.btn-ghost {
+  font-family: var(--nav-font);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover,
+.btn-primary:hover,
+.btn-outline:hover,
+.btn-ghost:hover {
+  background-color: #a78bfa !important;
+  border-color: #a78bfa !important;
+  color: #07080A !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(167, 139, 250, 0.4);
+}
+
+.btn:active,
+.btn-primary:active,
+.btn-outline:active,
+.btn-ghost:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 6px rgba(167, 139, 250, 0.3);
+}
+
+/* 3b. Links */
+a {
+  color: #a78bfa;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #d8b4fe;
+}
+
+/* 3c. Components visually different from original template - done above */
+
+/* --------------------------------------------------------
+   4. Spacing and Layout
+   -------------------------------------------------------- */
+
+/* 4a. Margin and padding changes for About, Resume, Portfolio sections */
+#about,
+#resume,
+#portfolio {
+  padding: 120px 0;
+}
+
+#about .container,
+#resume .container,
+#portfolio .container {
+  padding: 0 40px;
+}
+
+#about .intro-content {
+  padding: 40px;
+  margin-bottom: 40px;
+}
+
+#resume .resume-item {
+  margin-bottom: 4rem;
+  padding: 30px;
+}
+
+#portfolio .portfolio-card {
+  padding: 25px;
+  margin: 15px;
+}
+
+/* 4b. Content blocks: borders, border-radius, box-shadows */
+.section {
+  border: 1px solid rgba(167, 139, 250, 0.2);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  margin: 20px 0;
+}
+
+.skill-box,
+.service-item,
+.portfolio-card {
+  border: 2px solid rgba(167, 139, 250, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+.skill-box:hover,
+.service-item:hover,
+.portfolio-card:hover {
+  border-color: #a78bfa;
+  box-shadow: 0 10px 30px rgba(167, 139, 250, 0.3);
+  transform: translateY(-5px);
+}
+
+/* --------------------------------------------------------
+   5. Update styles of 2 selected website components
+   -------------------------------------------------------- */
+
+/* Selected Component 1: Portfolio cards */
+.portfolio-img {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 3px solid #a78bfa;
+}
+
+.portfolio-img img {
+  border-radius: 10px;
+  filter: sepia(0.3) contrast(1.1);
+  transition: all 0.4s ease;
+}
+
+.portfolio-img:hover img {
+  filter: sepia(0) contrast(1);
+  transform: scale(1.05);
+}
+
+.portfolio-info h4 {
+  color: #a78bfa;
+  font-family: var(--heading-font);
+}
+
+/* Selected Component 2: Skill boxes / progress bars */
+.progress-bar {
+  background-color: #a78bfa;
+  border-radius: 10px;
+}
+
+.skill-item h4 {
+  color: #a78bfa;
+  font-family: var(--heading-font);
+}
+
+/* --------------------------------------------------------
+   6. Contrast and readability
+   -------------------------------------------------------- */
+/* Purple (#a78bfa) on dark background (#07080A) ensures
+   high contrast and readability across all sections. */
+
+/* ========================================================
+   COMPLEMENTARY TASK - Services.html (Laboratory Work 8)
+   ======================================================== */
+
+/* 1a. Ordered and unordered lists with pseudo-elements/counters */
+.services ol {
+  counter-reset: service-step;
+  list-style: none;
+  padding-left: 0;
+}
+
+.services ol li {
+  counter-increment: service-step;
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 12px;
+}
+
+.services ol li::before {
+  content: counter(service-step);
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 28px;
+  height: 28px;
+  background: #a78bfa;
+  color: #07080A;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 28px;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.services ul.tech-tools-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.services ul.tech-tools-list > li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 10px;
+}
+
+.services ul.tech-tools-list > li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: #a78bfa;
+  font-size: 1.2rem;
+}
+
+/* 1b. Nested list visually different from main list */
+.services ul.nested-list {
+  list-style: none;
+  padding-left: 30px;
+  margin-top: 6px;
+  border-left: 3px solid rgba(167, 139, 250, 0.3);
+}
+
+.services ul.nested-list li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  color: #b0b0b0;
+}
+
+.services ul.nested-list li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: #e9d5ff;
+}
+
+/* 2a. Table header row visually distinct */
+.services table caption {
+  caption-side: top;
+  font-family: var(--heading-font);
+  font-size: 1.5rem;
+  color: #a78bfa;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.services table thead th {
+  background: #a78bfa !important;
+  color: #07080A !important;
+  font-family: var(--heading-font);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  padding: 16px;
+}
+
+.services table thead th::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #07080A;
+  margin-top: 8px;
+}
+
+/* 2b. Zebra striping and hover effect on rows */
+.services table tbody tr:nth-child(even) {
+  background: rgba(167, 139, 250, 0.08);
+}
+
+.services table tbody tr:hover {
+  background: rgba(167, 139, 250, 0.15);
+  transform: scale(1.01);
+  transition: all 0.3s ease;
+}
+
+/* 2c. Consistent cell padding and centre-align table content */
+.services table th,
+.services table td {
+  padding: 16px 20px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.services table td strong {
+  color: #a78bfa;
+  text-align: left;
+  display: block;
+}
