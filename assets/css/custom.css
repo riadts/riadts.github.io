@@ -356,3 +356,183 @@ a:hover {
   text-align: left;
   display: block;
 }
+
+/* ========================================================
+   LABORATORY WORK 10 - User Competency Progress Module
+   ======================================================== */
+
+/* XP Stats Row */
+.xp-stats-row .stat-card {
+  background: var(--surface-color);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+  border-radius: 12px;
+  padding: 24px 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.xp-stats-row .stat-label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  margin-bottom: 8px;
+}
+
+.xp-stats-row .stat-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #a78bfa;
+  margin: 0;
+}
+
+/* Progress Section */
+.progress-section {
+  background: var(--surface-color);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.progress-header {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--heading-color);
+}
+
+.progress-percent {
+  color: #a78bfa;
+}
+
+.progress-detail {
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+}
+
+/* Kanban Board */
+.kanban-board {
+  margin-bottom: 40px;
+}
+
+.kanban-column {
+  background: var(--surface-color);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.kanban-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 70%);
+}
+
+.kanban-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--heading-color);
+}
+
+.kanban-count {
+  background: #a78bfa;
+  color: #07080A;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.kanban-cards {
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 200px;
+}
+
+/* Skill Cards */
+.skill-card {
+  background: color-mix(in srgb, var(--default-color), transparent 96%);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 60%);
+  border-radius: 10px;
+  padding: 16px;
+  transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-2px);
+  border-color: #a78bfa;
+  box-shadow: 0 6px 16px rgba(167, 139, 250, 0.2);
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.skill-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--heading-color);
+  margin: 0;
+}
+
+.skill-xp {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #a78bfa;
+  background: color-mix(in srgb, #a78bfa, transparent 85%);
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+.skill-status {
+  margin: 4px 0 0 0;
+  font-size: 0.85rem;
+}
+
+/* Statistics Area */
+.statistics-area {
+  background: var(--surface-color);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+  border-radius: 12px;
+  padding: 32px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.statistics-area .stat-item {
+  padding: 16px;
+}
+
+.statistics-area .stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #a78bfa;
+  margin: 0 0 6px 0;
+}
+
+.statistics-area .stat-label {
+  font-size: 0.9rem;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .kanban-board {
+    flex-direction: column;
+  }
+
+  .kanban-column {
+    min-height: auto;
+    margin-bottom: 24px;
+  }
+}
+
+/* End Laboratory Work 10 */
+
