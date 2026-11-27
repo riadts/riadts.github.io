@@ -2,9 +2,11 @@
 
 Submit/defend the labs in this order. Open the matching cheat sheet for each.
 
+> **Note:** The CSS custom-stylesheet work is Lab 9 (labeled "Laboratory Work 3" in the template code).
+
 | Order | Lab | Cheat sheet file | Page to open in browser |
 |-------|-----|------------------|-------------------------|
-| 1 | Lab 3 — Custom CSS | `lab 3 overwiev.md` | any page (e.g. `index.html`) |
+| 1 | Lab 9 — Custom CSS (Custom Stylesheet) | `lab 9 overwiev.md` | any page (e.g. `index.html`) |
 | 2 | Lab 8 — Services: Tables & Lists | `lab 8 overwiev.md` | `services.html` |
 | 3 | Lab 10 — User Competency Progress Module | `lab 10 overwiev.md` | `skills.html` |
 | 4 | Lab 10 Comp — CSS Shapes + Gradient | `lab 10 comp overwiev.md` | `about.html` + `services.html` |
@@ -16,16 +18,16 @@ Submit/defend the labs in this order. Open the matching cheat sheet for each.
 2. Open DevTools (F12):
    - Console → submit the contact form (Lab 11) to see the logged object.
    - Application → Local Storage → `cv_progress_skills` (Lab 12).
-   - Elements inspector → inspect custom.css rules overriding bootstrap (Labs 3, 8, 10).
+   - Elements inspector → inspect custom.css rules overriding bootstrap (Labs 9, 8, 10).
 3. Open the matching cheat sheet file and the source files listed in "Key files to have open."
 4. Show the code at the exact line numbers listed.
 5. Use the "Defence talking points" to answer "what was done, where, and show me in the code."
 
 ## Labs NOT in this repo
-Labs 1, 2, 4, 5, 6, 7, 9 are NOT implemented in `riadts.github.io`. If your instructor expects those, they are separate assignments not part of this website codebase.
+Labs 1, 2, 4, 5, 6, 9 are NOT implemented in `riadts.github.io`. If your instructor expects those, they are separate assignments not part of this website codebase.
 
 ## Key files summary
-- `assets/css/custom.css` — Labs 3, 8, 10, 10 Comp
+- `assets/css/custom.css` — Labs 9, 8, 10, 10 Comp
 - `assets/js/custom.js` — Labs 11, 12
 - `contact.html` — Lab 11 form
 - `skills.html` — Labs 10, 12

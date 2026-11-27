@@ -1,5 +1,7 @@
-# LAB 3 — CUSTOM CSS STYLESHEET (CHEAT SHEET)
+# LAB 9 — CUSTOM CSS STYLESHEET (CHEAT SHEET)
 **Submit this sheet first.** Defence order: one lab at a time.
+
+> *(Labeled "Laboratory Work 3" in the template code comments.)*
 
 - **Repository:** `riadts.github.io` (FolioOne portfolio template)
 - **Student:** Mariia Fytsa
