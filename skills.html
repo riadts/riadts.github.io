@@ -79,8 +79,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>User Competency Progress Module</h2>
-        <p>Track your skill development, experience points, level, and rank across all competency areas.</p>
+        <h2>My Skill Progress</h2>
+        <p>Here I track my own skill development, experience points, level, and rank across all competency areas.</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -90,7 +90,7 @@
           <div class="col-md-4">
             <div class="stat-card text-center">
               <h6 class="stat-label">Total Experience</h6>
-              <h3 class="stat-value" id="totalXp">410 XP</h3>
+              <h3 class="stat-value" id="totalXp">155 XP</h3>
             </div>
           </div>
           <div class="col-md-4">
@@ -102,7 +102,7 @@
           <div class="col-md-4">
             <div class="stat-card text-center">
               <h6 class="stat-label">Rank</h6>
-              <h3 class="stat-value" id="currentRank">Trainee</h3>
+              <h3 class="stat-value" id="currentRank">Specialist</h3>
             </div>
           </div>
         </div>
@@ -111,47 +111,25 @@
         <div class="progress-section mb-5">
           <div class="progress-header d-flex justify-content-between mb-2">
             <span class="progress-label">Experience to Next Level</span>
-            <span class="progress-percent" id="progressPercent">68%</span>
+            <span class="progress-percent" id="progressPercent">3%</span>
           </div>
           <div class="progress" style="height: 12px; border-radius: 6px; background: rgba(167, 139, 250, 0.15);">
-            <div id="xpProgressBar" class="progress-bar" role="progressbar" style="width: 68%;" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100"></div>
+            <div id="xpProgressBar" class="progress-bar" role="progressbar" style="width: 3%;" aria-valuenow="3" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
           <div class="progress-detail mt-2 text-muted small">
-            Current: <span id="currentXpForLevel">410</span> / <span id="nextLevelXp">600</span> XP to next level
+            Level 3: <span id="currentXpForLevel">155</span> XP · Next level at <span id="nextLevelXp">300</span> XP
           </div>
         </div>
 
-        <!-- Skill Kanban Board (Task 2) -->
+        <!-- Skill Kanban Board (Task 2) - cards generated dynamically by JavaScript (Lab 12) -->
         <div class="kanban-board row g-4">
           <div class="col-lg-4">
             <div class="kanban-column">
               <div class="kanban-header">
                 <h3>To Be Planned</h3>
-                <span class="kanban-count" id="count-planned">3</span>
+                <span class="kanban-count" id="count-planned">0</span>
               </div>
-              <div class="kanban-cards" id="column-planned">
-                <div class="skill-card" data-status="planned" data-xp="45">
-                  <div class="skill-header d-flex justify-content-between align-items-start mb-2">
-                    <h5 class="skill-name mb-0">HTML &amp; CSS</h5>
-                    <span class="skill-xp">45 XP</span>
-                  </div>
-                  <p class="skill-status small text-muted">Status: To Be Planned</p>
-                </div>
-                <div class="skill-card" data-status="planned" data-xp="50">
-                  <div class="skill-header d-flex justify-content-between align-items-start mb-2">
-                    <h5 class="skill-name mb-0">Python</h5>
-                    <span class="skill-xp">50 XP</span>
-                  </div>
-                  <p class="skill-status small text-muted">Status: To Be Planned</p>
-                </div>
-                <div class="skill-card" data-status="planned" data-xp="60">
-                  <div class="skill-header d-flex justify-content-between align-items-start mb-2">
-                    <h5 class="skill-name mb-0">Traditional Art</h5>
-                    <span class="skill-xp">60 XP</span>
-                  </div>
-                  <p class="skill-status small text-muted">Status: To Be Planned</p>
-                </div>
-              </div>
+              <div class="kanban-cards" id="column-planned"></div>
             </div>
           </div>
 
@@ -159,24 +137,9 @@
             <div class="kanban-column">
               <div class="kanban-header">
                 <h3>In Progress</h3>
-                <span class="kanban-count" id="count-inprogress">2</span>
+                <span class="kanban-count" id="count-inprogress">0</span>
               </div>
-              <div class="kanban-cards" id="column-inprogress">
-                <div class="skill-card" data-status="inprogress" data-xp="60">
-                  <div class="skill-header d-flex justify-content-between align-items-start mb-2">
-                    <h5 class="skill-name mb-0">JavaScript</h5>
-                    <span class="skill-xp">60 XP</span>
-                  </div>
-                  <p class="skill-status small text-muted">Status: In Progress</p>
-                </div>
-                <div class="skill-card" data-status="inprogress" data-xp="40">
-                  <div class="skill-header d-flex justify-content-between align-items-start mb-2">
-                    <h5 class="skill-name mb-0">MATLAB</h5>
-                    <span class="skill-xp">40 XP</span>
-                  </div>
-                  <p class="skill-status small text-muted">Status: In Progress</p>
-                </div>
-              </div>
+              <div class="kanban-cards" id="column-inprogress"></div>
             </div>
           </div>
 
@@ -184,31 +147,9 @@
             <div class="kanban-column">
               <div class="kanban-header">
                 <h3>Completed</h3>
-                <span class="kanban-count" id="count-completed">3</span>
+                <span class="kanban-count" id="count-completed">0</span>
               </div>
-              <div class="kanban-cards" id="column-completed">
-                <div class="skill-card" data-status="completed" data-xp="70">
-                  <div class="skill-header d-flex justify-content-between align-items-start mb-2">
-                    <h5 class="skill-name mb-0">C++</h5>
-                    <span class="skill-xp">70 XP</span>
-                  </div>
-                  <p class="skill-status small text-muted">Status: Completed</p>
-                </div>
-                <div class="skill-card" data-status="completed" data-xp="35">
-                  <div class="skill-header d-flex justify-content-between align-items-start mb-2">
-                    <h5 class="skill-name mb-0">Git &amp; GitHub</h5>
-                    <span class="skill-xp">35 XP</span>
-                  </div>
-                  <p class="skill-status small text-muted">Status: Completed</p>
-                </div>
-                <div class="skill-card" data-status="completed" data-xp="50">
-                  <div class="skill-header d-flex justify-content-between align-items-start mb-2">
-                    <h5 class="skill-name mb-0">Bootstrap</h5>
-                    <span class="skill-xp">50 XP</span>
-                  </div>
-                  <p class="skill-status small text-muted">Status: Completed</p>
-                </div>
-              </div>
+              <div class="kanban-cards" id="column-completed"></div>
             </div>
           </div>
         </div>
@@ -219,8 +160,8 @@
       <div class="container statistics-area mt-5" data-aos="fade-up" data-aos-delay="200">
         <div class="row section-title text-center mb-4">
           <div class="col-12">
-            <h3>User Skill Progress Statistics</h3>
-            <p>Overview of your skill distribution and completion progress.</p>
+            <h3>My Skill Progress Statistics</h3>
+            <p>Overview of my skill distribution and completion progress.</p>
           </div>
         </div>
         <div class="row g-4">
@@ -298,6 +239,9 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Custom JS File (Laboratory Work 11 & 12) -->
+  <script src="assets/js/custom.js"></script>
 
 </body>
 

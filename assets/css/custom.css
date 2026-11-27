@@ -9,20 +9,23 @@
 
 /* 2a. Change the font family used on the website */
 :root {
-  --default-font: "Georgia", "Times New Roman", serif;
+  --default-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --heading-font: "Playfair Display", "Georgia", serif;
-  --nav-font: "Trebuchet MS", sans-serif;
 
-  /* Purple-Lavender Color Palette - Soft & Harmonious */
-  --accent-purple: #a78bfa;      /* soft violet - primary accent */
-  --accent-lavender: #d8b4fe;    /* light lavender */
-  --accent-pink: #e9d5ff;        /* muted lilac-pink */
-  --accent-blue: #818cf8;        /* muted indigo-blue (harmonious with purple) */
-  --accent-text-dark: #07080A;   /* dark text for light buttons */
+  /* Refined accent palette - one clear accent color */
+  --accent: #6366f1;          /* indigo - primary accent */
+  --accent-hover: #4f46e5;    /* darker indigo on hover */
+  --accent-text-dark: #0f172a; /* dark text for light buttons */
+  --muted: #94a3b8;           /* lighter slate for secondary text */
+  --border: #334155;          /* darker border for dark theme */
+  --surface: #0f172a;         /* dark slate card surface */
 }
 
+/* Use system font for body - clean and human */
 body {
   font-family: var(--default-font);
+  color: #f1f5f9;
+  background-color: #020617;
 }
 
 /* 2b. Change heading styles (h1-h6) - visually different from original */
@@ -33,46 +36,47 @@ h4,
 h5,
 h6 {
   font-family: var(--heading-font);
-  color: #a78bfa;
-  letter-spacing: 0.5px;
+  color: #ffffff;
+  letter-spacing: -0.2px;
+  line-height: 1.2;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.75rem;
   font-weight: 700;
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   font-weight: 600;
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 600;
 }
 
 h4 {
-  font-size: 1.75rem;
+  font-size: 1.35rem;
   font-weight: 500;
 }
 
 h5 {
-  font-size: 1.5rem;
+  font-size: 1.15rem;
   font-weight: 500;
 }
 
 h6 {
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 400;
 }
 
 /* 2c. Update paragraph styles */
 p {
   font-family: var(--default-font);
-  font-size: 1.1rem;
-  line-height: 1.9;
-  color: #e0e0e0;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #cbd5e1;
 }
 
 /* 2d. Headings and paragraphs visually different from original template - done above */
@@ -86,41 +90,40 @@ p {
 .btn-primary,
 .btn-outline,
 .btn-ghost {
-  font-family: var(--nav-font);
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  border-radius: 4px;
-  transition: all 0.3s ease;
+  font-family: var(--default-font);
+  font-weight: 500;
+  letter-spacing: -0.1px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
 }
 
 .btn:hover,
 .btn-primary:hover,
 .btn-outline:hover,
 .btn-ghost:hover {
-  background-color: #a78bfa !important;
-  border-color: #a78bfa !important;
-  color: #07080A !important;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(167, 139, 250, 0.4);
+  background-color: var(--accent-hover) !important;
+  border-color: var(--accent-hover) !important;
+  color: #ffffff !important;
+  transform: none;
+  box-shadow: none;
 }
 
 .btn:active,
 .btn-primary:active,
 .btn-outline:active,
 .btn-ghost:active {
-  transform: translateY(1px);
-  box-shadow: 0 2px 6px rgba(167, 139, 250, 0.3);
+  transform: none;
+  box-shadow: none;
 }
 
 /* 3b. Links */
 a {
-  color: #a78bfa;
-  transition: all 0.3s ease;
+  color: var(--accent);
+  transition: color 0.2s ease;
 }
 
 a:hover {
-  color: #d8b4fe;
+  color: var(--accent-hover);
 }
 
 /* 3c. Components visually different from original template - done above */
@@ -133,53 +136,109 @@ a:hover {
 #about,
 #resume,
 #portfolio {
-  padding: 120px 0;
+  padding: 80px 0;
 }
 
 #about .container,
 #resume .container,
 #portfolio .container {
-  padding: 0 40px;
+  padding: 0 20px;
 }
 
 #about .intro-content {
-  padding: 40px;
+  padding: 0;
   margin-bottom: 40px;
 }
 
 #resume .resume-item {
-  margin-bottom: 4rem;
-  padding: 30px;
+  margin-bottom: 3rem;
+  padding: 0;
 }
 
 #portfolio .portfolio-card {
-  padding: 25px;
-  margin: 15px;
+  padding: 20px;
+  margin: 12px;
 }
 
-/* 4b. Content blocks: borders, border-radius, box-shadows */
+/* 4b. Content blocks: subtle borders instead of heavy shadows */
 .section {
-  border: 1px solid rgba(167, 139, 250, 0.2);
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-  margin: 20px 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: none;
+  margin: 30px 0;
 }
 
 .skill-box,
 .service-item,
 .portfolio-card {
-  border: 2px solid rgba(167, 139, 250, 0.3);
-  border-radius: 16px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
-  transition: all 0.3s ease;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: none;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Equal-height skill boxes in About/Resume sections */
+.skills-animation .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skills-animation .col-md-6,
+.skills-animation .col-lg-3 {
+  display: flex;
+}
+
+.skills-animation .skill-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .skill-box:hover,
 .service-item:hover,
 .portfolio-card:hover {
-  border-color: #a78bfa;
-  box-shadow: 0 10px 30px rgba(167, 139, 250, 0.3);
-  transform: translateY(-5px);
+  border-color: var(--accent);
+  box-shadow: none;
+  transform: none;
+}
+
+/* Portfolio filter buttons - plain text styling */
+.portfolio-filters {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.portfolio-filters li {
+  cursor: pointer;
+  padding: 6px 14px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: #cbd5e1;
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+  transition: all 0.2s ease;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.portfolio-filters li:hover:not(.filter-active) {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: rgba(99, 102, 241, 0.1);
+}
+
+.portfolio-filters li.filter-active {
+  color: #ffffff;
+  background: var(--accent);
+  border-color: var(--accent);
 }
 
 /* --------------------------------------------------------
@@ -188,43 +247,60 @@ a:hover {
 
 /* Selected Component 1: Portfolio cards */
 .portfolio-img {
-  border-radius: 12px;
+  border-radius: 8px;
   overflow: hidden;
-  border: 3px solid #a78bfa;
+  border: none;
 }
 
 .portfolio-img img {
-  border-radius: 10px;
-  filter: sepia(0.3) contrast(1.1);
-  transition: all 0.4s ease;
+  border-radius: 6px;
+  filter: none;
+  transition: transform 0.3s ease;
 }
 
 .portfolio-img:hover img {
-  filter: sepia(0) contrast(1);
-  transform: scale(1.05);
+  filter: none;
+  transform: scale(1.02);
 }
 
 .portfolio-info h4 {
-  color: #a78bfa;
+  color: #ffffff;
   font-family: var(--heading-font);
 }
 
 /* Selected Component 2: Skill boxes / progress bars */
 .progress-bar {
-  background-color: #a78bfa;
-  border-radius: 10px;
+  background-color: var(--accent);
+  border-radius: 4px;
 }
 
 .skill-item h4 {
-  color: #a78bfa;
+  color: #ffffff;
   font-family: var(--heading-font);
+}
+
+/* Resume columns - centered */
+#resume .row {
+  display: flex;
+  justify-content: center;
+  gap: 480px;
+  flex-wrap: wrap;
+}
+
+#resume .col-lg-6 {
+  flex: 0 0 auto;
+  width: auto;
+  max-width: 480px;
+}
+
+#resume .resume-item {
+  margin-bottom: 60px;
 }
 
 /* --------------------------------------------------------
    6. Contrast and readability
    -------------------------------------------------------- */
-/* Purple (#a78bfa) on dark background (#07080A) ensures
-   high contrast and readability across all sections. */
+/* Indigo accent on dark background with light text for readability. */
 
 /* ========================================================
    COMPLEMENTARY TASK - Services.html (Laboratory Work 8)
@@ -251,8 +327,8 @@ a:hover {
   top: 2px;
   width: 28px;
   height: 28px;
-  background: #a78bfa;
-  color: #07080A;
+  background: var(--accent);
+  color: #ffffff;
   border-radius: 50%;
   text-align: center;
   line-height: 28px;
@@ -275,7 +351,7 @@ a:hover {
   content: "▹";
   position: absolute;
   left: 0;
-  color: #a78bfa;
+  color: var(--accent);
   font-size: 1.2rem;
 }
 
@@ -284,7 +360,7 @@ a:hover {
   list-style: none;
   padding-left: 30px;
   margin-top: 6px;
-  border-left: 3px solid rgba(167, 139, 250, 0.3);
+  border-left: 2px solid var(--border);
 }
 
 .services ul.nested-list li {
@@ -292,14 +368,14 @@ a:hover {
   padding-left: 25px;
   margin-bottom: 6px;
   font-size: 0.95rem;
-  color: #b0b0b0;
+  color: #475569;
 }
 
 .services ul.nested-list li::before {
   content: "–";
   position: absolute;
   left: 0;
-  color: #e9d5ff;
+  color: var(--muted);
 }
 
 /* 2a. Table header row visually distinct */
@@ -307,52 +383,46 @@ a:hover {
   caption-side: top;
   font-family: var(--heading-font);
   font-size: 1.5rem;
-  color: #a78bfa;
+  color: #ffffff;
   margin-bottom: 15px;
   text-align: left;
 }
 
 .services table thead th {
-  background: #a78bfa !important;
-  color: #07080A !important;
+  background: var(--accent) !important;
+  color: #ffffff !important;
   font-family: var(--heading-font);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  font-weight: 600;
+  letter-spacing: -0.1px;
   border: none;
-  padding: 16px;
+  padding: 12px 16px;
 }
 
 .services table thead th::after {
-  content: "";
-  display: block;
-  width: 40px;
-  height: 3px;
-  background: #07080A;
-  margin-top: 8px;
+  display: none;
 }
 
 /* 2b. Zebra striping and hover effect on rows */
 .services table tbody tr:nth-child(even) {
-  background: rgba(167, 139, 250, 0.08);
+  background: rgba(99, 102, 241, 0.03);
 }
 
 .services table tbody tr:hover {
-  background: rgba(167, 139, 250, 0.15);
-  transform: scale(1.01);
-  transition: all 0.3s ease;
+  background: rgba(99, 102, 241, 0.06);
+  transform: none;
+  transition: none;
 }
 
 /* 2c. Consistent cell padding and centre-align table content */
 .services table th,
 .services table td {
-  padding: 16px 20px;
-  text-align: center;
+  padding: 12px 16px;
+  text-align: left;
   vertical-align: middle;
 }
 
 .services table td strong {
-  color: #a78bfa;
+  color: #f8fafc;
   text-align: left;
   display: block;
 }
@@ -363,111 +433,111 @@ a:hover {
 
 /* XP Stats Row */
 .xp-stats-row .stat-card {
-  background: var(--surface-color);
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
-  border-radius: 12px;
-  padding: 24px 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px 16px;
+  box-shadow: none;
 }
 
 .xp-stats-row .stat-label {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-  margin-bottom: 8px;
+  color: var(--muted);
+  margin-bottom: 6px;
 }
 
 .xp-stats-row .stat-value {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-weight: 700;
-  color: #a78bfa;
+  color: var(--accent);
   margin: 0;
 }
 
 /* Progress Section */
 .progress-section {
-  background: var(--surface-color);
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
-  border-radius: 12px;
-  padding: 24px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: none;
 }
 
 .progress-header {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 600;
-  color: var(--heading-color);
+  color: #ffffff;
 }
 
 .progress-percent {
-  color: #a78bfa;
+  color: var(--accent);
 }
 
 .progress-detail {
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: #cbd5e1;
 }
 
 /* Kanban Board */
 .kanban-board {
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 }
 
 .kanban-column {
-  background: var(--surface-color);
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
-  border-radius: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
   height: 100%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: none;
 }
 
 .kanban-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 20px;
-  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 70%);
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border);
 }
 
 .kanban-header h3 {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 600;
-  color: var(--heading-color);
+  color: #ffffff;
 }
 
 .kanban-count {
-  background: #a78bfa;
-  color: #07080A;
-  font-size: 0.8rem;
+  background: var(--accent);
+  color: #ffffff;
+  font-size: 0.75rem;
   font-weight: 700;
-  padding: 4px 10px;
-  border-radius: 20px;
+  padding: 3px 8px;
+  border-radius: 12px;
 }
 
 .kanban-cards {
-  padding: 16px 20px;
+  padding: 14px 18px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  min-height: 200px;
+  gap: 10px;
+  min-height: 160px;
 }
 
 /* Skill Cards */
 .skill-card {
-  background: color-mix(in srgb, var(--default-color), transparent 96%);
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 60%);
-  border-radius: 10px;
-  padding: 16px;
-  transition: all 0.3s ease;
+  background: #1e293b;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 14px;
+  transition: all 0.2s ease;
 }
 
 .skill-card:hover {
-  transform: translateY(-2px);
-  border-color: #a78bfa;
-  box-shadow: 0 6px 16px rgba(167, 139, 250, 0.2);
+  transform: none;
+  border-color: var(--accent);
+  box-shadow: none;
 }
 
 .skill-header {
@@ -477,49 +547,50 @@ a:hover {
 }
 
 .skill-name {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
-  color: var(--heading-color);
+  color: #ffffff;
   margin: 0;
 }
 
 .skill-xp {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 700;
-  color: #a78bfa;
-  background: color-mix(in srgb, #a78bfa, transparent 85%);
+  color: var(--accent);
+  background: rgba(99, 102, 241, 0.2);
   padding: 2px 8px;
-  border-radius: 6px;
+  border-radius: 4px;
 }
 
 .skill-status {
   margin: 4px 0 0 0;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
+  color: var(--muted);
 }
 
 /* Statistics Area */
 .statistics-area {
-  background: var(--surface-color);
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
-  border-radius: 12px;
-  padding: 32px 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 24px 20px;
+  box-shadow: none;
 }
 
 .statistics-area .stat-item {
-  padding: 16px;
+  padding: 12px;
 }
 
 .statistics-area .stat-number {
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 700;
-  color: #a78bfa;
-  margin: 0 0 6px 0;
+  color: var(--accent);
+  margin: 0 0 4px 0;
 }
 
 .statistics-area .stat-label {
-  font-size: 0.9rem;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  font-size: 0.8rem;
+  color: var(--muted);
   margin: 0;
 }
 
@@ -530,9 +601,92 @@ a:hover {
 
   .kanban-column {
     min-height: auto;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
 }
 
-/* End Laboratory Work 10 */
+/* ========================================================
+   LABORATORY WORK 10 - Complementary Task
+   ======================================================== */
 
+/* Services section: subtle gradient background */
+.services-gradient-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.services-gradient-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(99, 102, 241, 0.04) 0%,
+    rgba(99, 102, 241, 0.01) 50%,
+    rgba(99, 102, 241, 0.04) 100%
+  );
+  z-index: 0;
+}
+
+.services-gradient-bg > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* About section: CSS shapes - static, clean */
+.about-shapes {
+  position: relative;
+  margin-top: 48px;
+}
+
+.shape {
+  position: absolute;
+  opacity: 0.5;
+}
+
+.shape.circle {
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+.shape.triangle {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 35px solid var(--accent);
+  border-radius: 0;
+}
+
+.shape.square {
+  background: rgba(99, 102, 241, 0.3);
+  border-radius: 6px;
+}
+
+.shape-1 {
+  width: 70px;
+  height: 70px;
+  top: -20px;
+  left: 8%;
+}
+
+.shape-2 {
+  width: 50px;
+  height: 50px;
+  bottom: -15px;
+  right: 8%;
+}
+
+.shape-3 {
+  width: 90px;
+  height: 90px;
+  top: 35%;
+  left: 4%;
+}
+
+/* End Laboratory Work 10 - Complementary Task */
+
+/* End Laboratory Work 10 */
